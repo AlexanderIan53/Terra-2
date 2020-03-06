@@ -11,8 +11,7 @@ public class Endereco {
 	private String sigla;
 	private String cep;
 
-	public void leEndereco(DataInput din) throws IOException
-	{
+	public void leEndereco(DataInput din) throws IOException {
 		byte logradouro[] = new byte[72];
 		byte bairro[] = new byte[72];
 		byte cidade[] = new byte[72];
@@ -41,8 +40,7 @@ public class Endereco {
 	}
 
 
-	public void escreveEndereco(DataOutput dout) throws IOException
-	{		
+	public void escreveEndereco(DataOutput dout) throws IOException {		
 		// Definie a forma como caracteres especias estão codificados.
 		Charset enc = Charset.forName("ISO-8859-1");
 		dout.write(this.logradouro.getBytes(enc));
